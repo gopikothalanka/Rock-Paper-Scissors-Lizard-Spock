@@ -97,7 +97,7 @@ span{
 @media(max-width:400px){
   .container{
     width: 90%;
-    height: 90%;
+    height: 70%;
     padding: 0.5rem 0.5rem;
   }
   .coments p{
