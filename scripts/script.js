@@ -60,18 +60,18 @@ const clicked = function(input){
       result.innerText ='You Win';
       result.style='background-color:#74f2ce';
       userScore++;
-      console.log('win');
+      
       break;
     case 'lose':
       result.innerText ='You Lose';
       result.style='background-color:#f53844';
       computerScore++;
-      console.log('lose');
+     
       break;
     case 'draw':
       result.innerText ='DRAW';
       result.style='background-color:#f1dfd1';
-      console.log('draw');
+     
       break;
   }
   //update score

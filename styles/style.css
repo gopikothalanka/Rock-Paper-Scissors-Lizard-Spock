@@ -68,7 +68,10 @@ header .score{
   outline: none;
   cursor: pointer;
   margin-bottom: 2rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
+
 .coments{
   margin-top: 2rem ;
 }
