@@ -3,7 +3,7 @@
 const result =document.getElementById('result');
 let [userScore,computerScore] = [0,0];
 
-//game rules
+//game rules in Jason
 let gameRules={
   Rock:{
     Rock:'draw',
@@ -40,14 +40,7 @@ let gameRules={
     Lizard:'lose',
     Spock:'draw',
   }
-
-}
-//compare with user choice
-
-
-
-//update score
-
+};
 //user clicks 
 const clicked = function(input){
  
@@ -56,13 +49,12 @@ const clicked = function(input){
   const choices =['Rock','Paper','Scissor','Lizard','Spock']
   let randomNum= Math.trunc(Math.random()*5);
   let computerPicks =choices[randomNum];
-  
-  
 
   //shows Choose messages
   document.getElementById('user-choice').innerHTML=`You Choose <span>${input.toUpperCase()}</span>`;
   document.getElementById('computer-choice').innerHTML=`Computer Choose <span> ${computerPicks.toUpperCase()}</span>`;
 
+  //compare computer choice with user choice
   switch (gameRules[input][computerPicks]){
     case 'win':
       result.innerText ='You Win';
@@ -75,15 +67,14 @@ const clicked = function(input){
       result.style='background-color:#f53844';
       computerScore++;
       console.log('lose');
-
       break;
     case 'draw':
       result.innerText ='DRAW';
       result.style='background-color:#f1dfd1';
       console.log('draw');
-      
       break;
   }
+  //update score
   document.getElementById('user-score').innerText=userScore;
   document.getElementById('computer-score').innerText=computerScore;
 
