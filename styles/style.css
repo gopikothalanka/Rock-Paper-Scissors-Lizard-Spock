@@ -113,6 +113,7 @@ span{
   .tools button {
     background-color:#0D324D;
      font-size: 3rem;
+     min-height: 111.3px;
     height: 6rem;
     width: 6rem;
    
