@@ -7,7 +7,7 @@ body{
   font-family: 'Poppins', sans-serif;
   background-color: #7f5a83;
   background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
-  height: 100vh;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +16,8 @@ body{
 
 .container{
   width: 45%;
-   height: 70%;
+  height: auto;
+  margin: 5%;
   background-color: #bdd4e7;
   background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
@@ -48,13 +49,31 @@ header .score{
 .tools{
   margin: auto;
   width: 90%;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  /* position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%; */
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr) ;
+  grid-template-rows: repeat(3,1fr);
+  grid-gap: 0;
+    
+}
+.rock{
+	grid-column:1/2;
+}
+.paper{
+	grid-column:3/4;
+	
+}
+.scissor{
+	grid-column:2/3;
+	
+}
+.lizard{
+	grid-column:1/2;
+	
+}
+.spock{
+	grid-column:3/4;
+	
 }
 
 .tools button {
