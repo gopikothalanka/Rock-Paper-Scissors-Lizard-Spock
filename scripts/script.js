@@ -43,15 +43,20 @@ let gameRules={
 };
 //user clicks 
 const clicked = function(input){
- 
+      result.innerText ='';
+      result.style='background-color:transparent';
+      document.getElementById('computer-choice').innerHTML='';
   
   //choice of computer
   const choices =['Rock','Paper','Scissor','Lizard','Spock']
   let randomNum= Math.trunc(Math.random()*5);
   let computerPicks =choices[randomNum];
+ 
 
   //shows Choose messages
   document.getElementById('user-choice').innerHTML=`You Choose <span>${input.toUpperCase()}</span>`;
+  setTimeout(()=>{
+  
   document.getElementById('computer-choice').innerHTML=`Computer Choose <span> ${computerPicks.toUpperCase()}</span>`;
 
   //compare computer choice with user choice
@@ -78,5 +83,5 @@ const clicked = function(input){
   document.getElementById('user-score').innerText=userScore;
   document.getElementById('computer-score').innerText=computerScore;
 
-
+  }, 1000);
 };
